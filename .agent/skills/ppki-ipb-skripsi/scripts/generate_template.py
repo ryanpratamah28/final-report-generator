@@ -213,7 +213,7 @@ def create_ipb_template(output_path):
     set_page_numbering(section1, fmt="lowerRoman", start=1)
 
     def add_chapter_title(text):
-        p = doc.add_paragraph()
+        p = doc.add_paragraph(style='Heading 1')
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p.paragraph_format.first_line_indent = Cm(0)
         p.paragraph_format.space_before = Pt(0)
@@ -222,6 +222,8 @@ def create_ipb_template(output_path):
         run.bold = True
         run.font.size = Pt(14)
         run.font.name = 'Times New Roman'
+        from docx.shared import RGBColor
+        run.font.color.rgb = RGBColor(0, 0, 0)
 
     front_matter = [
         "HALAMAN PERNYATAAN",
@@ -247,7 +249,7 @@ def create_ipb_template(output_path):
     set_page_numbering(main_section, fmt="decimal", start=1)
     
     def add_sub_chapter(text):
-        p = doc.add_paragraph()
+        p = doc.add_paragraph(style='Heading 2')
         p.alignment = WD_ALIGN_PARAGRAPH.LEFT
         p.paragraph_format.first_line_indent = Cm(0)
         p.paragraph_format.space_before = Pt(24) # berjarak 2 spasi dari atas
@@ -256,8 +258,21 @@ def create_ipb_template(output_path):
         run.bold = True
         run.font.size = Pt(12)
         run.font.name = 'Times New Roman'
+        from docx.shared import RGBColor
+        run.font.color.rgb = RGBColor(0, 0, 0)
 
     def add_sub_sub_chapter(text):
+        p = doc.add_paragraph(style='Heading 3')
+        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        p.paragraph_format.first_line_indent = Cm(0)
+        p.paragraph_format.space_before = Pt(18) # berjarak 1.5 spasi dari atas
+        p.paragraph_format.space_after = Pt(12)  # 1 spasi bawah
+        run = p.add_run(text)
+        run.bold = False # tidak tebal
+        run.font.size = Pt(12)
+        run.font.name = 'Times New Roman'
+        from docx.shared import RGBColor
+        run.font.color.rgb = RGBColor(0, 0, 0)
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.LEFT
         p.paragraph_format.first_line_indent = Cm(0)
