@@ -1,6 +1,6 @@
 # Karya Ilmiah: Bachelor's Thesis
 
-This workspace is dedicated to the writing, formatting, and management of the Bachelor's Thesis (_Skripsi S-1_) for **Ryan Al-Thariq** (NIM: **G64101234**) in the Department of Computer Science (_Ilmu Komputer_), Faculty of Mathematics and Natural Sciences (_FMIPA_), **IPB University**.
+This workspace is dedicated to the writing, formatting, and management of the Final Report for **Ryan Al-Thariq** (NIM: **G64101234**) in the Department of Computer Science (_Ilmu Komputer_), Faculty of Mathematics and Natural Sciences (_FMIPA_).
 
 The project is structured to strictly adhere to the official **Pedoman Penulisan Karya Ilmiah (PPKI) IPB Edisi ke-4**.
 
@@ -9,8 +9,6 @@ The project is structured to strictly adhere to the official **Pedoman Penulisan
 ## 📝 Thesis Information
 
 - **Title**: _Implementasi Sistem Notifikasi Terintegrasi Berbasis API Gateway untuk Efisiensi Koordinasi Tim Multi-Platform: Studi Kasus Tasku.site_
-- **Student**: Ryan Al-Thariq (G64101234)
-- **Year**: 2026
 - **Focus**: Software engineering, API Gateways, event-driven webhooks, and asynchronous message broker queues (Redis) integrated into a multi-platform notification hub ([Tasku.site](https://tasku.site)).
 
 ---
@@ -49,8 +47,9 @@ Karya Ilmiah/
 │       └── in_progress.md                # Log of active and next steps
 ├── AGENT.md                              # AI Agent Brain Map (entrypoint index)
 ├── GEMINI.md                             # Workspace conventions and rules
-├── Karya Ilmiah_Tasku_PPKI IPB_V01.docx  # Thesis Draft Version 1
-├── Karya Ilmiah_Tasku_PPKI IPB_V02.docx  # Current Thesis Manuscript (Version 2)
+├── Karya Ilmiah_Tasku_PPKI IPB_V01.docx  # Thesis Draft (Version 1)
+├── Karya Ilmiah_Tasku_PPKI IPB_V02.docx  # Thesis Draft (Version 2)
+├── Karya Ilmiah_Tasku_PPKI IPB_V03.docx  # Current Thesis Manuscript (Version 3)
 ├── PPKI IPB.docx                         # Original PPKI IPB guide document
 ├── PPKI IPB.pdf                          # Original PPKI IPB guide PDF (Source of Truth)
 ├── LAMPIRAN PPKI IPB.pdf                 # Appendices of formatting examples PDF
@@ -134,3 +133,38 @@ The following tasks are managed under the `.agent/tasks/` directory:
 2. **Abstract Verification**: Verify that the English and Indonesian abstracts fit on a single page and are under 200 words.
 3. **Scientific Nomenclature Scanner**: Scan the document to verify that all species and genus names are correctly formatted.
 4. **Halaman Pengesahan**: Generate the approval sheet structure with precise spacing.
+
+## Important Notes
+
+> **This project is intended solely as an academic formatting and educational aid for students.**
+
+### Disclaimer
+
+- All names, organizations, institutions, datasets, scenarios, and examples used in this project are **dummy data** and are provided for demonstration, educational, and formatting purposes only.
+- Any resemblance to actual persons, organizations, products, services, or events is purely coincidental.
+- The generated content should be treated as a **sample academic document** and not as a final submission-ready thesis, dissertation, journal article, or scientific publication.
+- Students are responsible for validating, revising, and adapting all generated content according to their institution's academic guidelines, supervisor feedback, and research requirements.
+- References, citations, figures, tables, and appendices should be independently verified before use in any official academic submission.
+- This project does not replace academic supervision, peer review, or institutional review processes.
+
+### Usage Guidelines
+
+- Use this project as a reference for:
+    - Academic document structure
+    - Formatting standards
+    - Writing organization
+    - Chapter composition
+    - Citation placement
+    - Thesis or final project preparation
+
+- Do not use generated dummy data, assumptions, analyses, or conclusions as real research findings without proper validation and supporting evidence.
+
+### Academic Integrity
+
+Users are expected to comply with their institution's policies regarding:
+
+- Academic honesty
+- Citation practices
+- Research ethics
+- Plagiarism prevention
+- Responsible use of AI-assisted writing tools
