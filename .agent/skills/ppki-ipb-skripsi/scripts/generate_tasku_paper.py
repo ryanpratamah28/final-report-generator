@@ -79,7 +79,7 @@ def set_page_numbering(section, fmt="lowerRoman", start=None):
     sectPr.append(pgNumType)
 
 def add_chapter_title(doc, text):
-    p = doc.add_paragraph()
+    p = doc.add_paragraph(style='Heading 1')
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.first_line_indent = Cm(0)
     p.paragraph_format.space_before = Pt(0)
@@ -89,9 +89,11 @@ def add_chapter_title(doc, text):
     run.bold = True
     run.font.size = Pt(14)
     run.font.name = 'Times New Roman'
+    from docx.shared import RGBColor
+    run.font.color.rgb = RGBColor(0, 0, 0)
 
 def add_sub_chapter(doc, text):
-    p = doc.add_paragraph()
+    p = doc.add_paragraph(style='Heading 2')
     p.alignment = WD_ALIGN_PARAGRAPH.LEFT
     p.paragraph_format.first_line_indent = Cm(0)
     p.paragraph_format.space_before = Pt(24)
@@ -101,6 +103,8 @@ def add_sub_chapter(doc, text):
     run.bold = True
     run.font.size = Pt(12)
     run.font.name = 'Times New Roman'
+    from docx.shared import RGBColor
+    run.font.color.rgb = RGBColor(0, 0, 0)
 
 def add_body_paragraph(doc, text):
     p = doc.add_paragraph(text)
@@ -208,7 +212,7 @@ def generate_paper(output_path):
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_before = Cm(4)
-    run = p.add_run("DEPARTEMEN ILMU KOMPUTER\nFAKULTAS MATEMATIKA DAN ILMU PENGETAHUAN ALAM\nINSTITUT PERTANIAN BOGOR\nBOGOR\n2026")
+    run = p.add_run("DEPARTEMEN ILMU KOMPUTER\nFAKULTAS TEKNOLOGI\nINSTITUT PERTANIAN BOGOR\nBOGOR\n2026")
     run.bold = True
     run.font.size = Pt(14)
     run.font.name = 'Times New Roman'
@@ -465,5 +469,5 @@ def generate_paper(output_path):
     print(f"Comprehensive Academic Paper generated at: {output_path}")
 
 if __name__ == "__main__":
-    target = os.path.join(os.getcwd(), "Skripsi_Tasku_PPKI_IPB_Full.docx")
+    target = os.path.join(os.getcwd(), "Karya Ilmiah_Tasku_PPKI IPB_V03.docx")
     generate_paper(target)
